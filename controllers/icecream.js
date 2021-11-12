@@ -61,7 +61,7 @@ exports.icecream_update_put = async function(req, res) {
         if(req.body.price) toUpdate.price = req.body.price; 
         if(req.body.toppings) toUpdate.toppings = req.body.toppings; 
         let result = await toUpdate.save(); 
-        console.log("Sucess " + result) 
+        console.log("Success " + result) 
         res.send(result) 
     } catch (err) { 
         res.status(500) 
