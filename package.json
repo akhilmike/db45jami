@@ -1,5 +1,5 @@
 {
-  "name": "adidala",
+  "name": "jami",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "description": "package for lab10",
   "main": "app.js",
-  "author": "sindhuja adidala",
+  "author": "Akhil Jami",
   "license": "ISC"
 }
