@@ -13,10 +13,15 @@ block content
     div(class='row m-1')
     div(class="row row-cols-1 row-cols-sm-4 g-6")
       each item, index in items
-        - let destination = `dispatch(\"/gas/update?id=${item._id}\")`
+        - let destination = `dispatch(\"/icecream/update?id=${item._id}\")`
+        - let detail = `dispatch(\"/icecream/detail/?id=${item._id}")`
+        - let deleteItem = `dispatch(\"/icecream/delete/?id=${item._id}")` 
+
         div(class="card text-white bg-secondary mb-3" class='col' class='card' class='card-body' class='card-text' onclick='buy('+index+')') Item #{item.flavour}(#{item.price})is #{item.toppings}
           <br><br>
           button.btn( class="btn-danger ml-1", onclick= destination) Update
+          button.btn( class="btn-success", onclick= detail) Details
+          button.btn( class="btn-danger", onclick= deleteItem) Delete
 
   script.
     function dispatch(path){
